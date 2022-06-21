@@ -28,7 +28,9 @@ app.engine('hbs', engine({ extname: '.hbs',
                         }),
 );
 app.set('view engine', 'hbs');
+app.set('login', path.join(__dirname, 'resources', 'login'));
 app.set('views', path.join(__dirname, 'resources', 'views'));
+
 
 //route init
 route(app);
