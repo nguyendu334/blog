@@ -1,20 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: LightSteelBlue; position: fixed; top: 0px; right: 0px; left: 0px; z-index: 1; padding: 20px;">
-  <div class="container">
+  <div class="container" style="padding-left: 180px;">
     <ul class="navbar-nav">
-      <div class="dropdown">
+      <div class="dropdown" >
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Education
+          TRANG CHỦ
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
           <a class="dropdown-item" href="/">TRANG CHỦ</a>
-
-          <a class="dropdown-item" href="/courses/create">ĐĂNG KHÓA HỌC</a>
-          <a class="dropdown-item" href="/me/stored/courses">KHÓA HỌC CỦA TÔI</a>
+          <a class="dropdown-item" href="/courses/create">THÊM BÀI VIÊT</a>
+          <a class="dropdown-item" href="/me/stored/courses">BÀI VIẾT CỦA TÔI</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/login">ĐĂNG XUẤT</a>
+          <a class="dropdown-item" href="/auth/login">ĐĂNG XUẤT</a>
         </div>
+        
       </div>
     </ul>
   </div>
+  <form class="form-inline" >
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <a href="/search" class="btn btn-primary"> Search</a>
+  </form>
 </nav>

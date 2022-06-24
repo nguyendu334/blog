@@ -7,4 +7,5 @@ const sitecontroller = require('../app/controllers/siteController');
 router.get('/search', sitecontroller.search);
 router.get('/', sitecontroller.index);
 
+
 module.exports = router;

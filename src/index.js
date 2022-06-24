@@ -3,6 +3,8 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const { engine } = require('express-handlebars');
+const bodyParser = require('body-parser');
+
 const app = express();
 const port = 3000;
 
@@ -27,8 +29,11 @@ app.engine('hbs', engine({ extname: '.hbs',
                           helpers: require('./helpers/handlebars')
                         }),
 );
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.set('view engine', 'hbs');
-app.set('login', path.join(__dirname, 'resources', 'login'));
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
 

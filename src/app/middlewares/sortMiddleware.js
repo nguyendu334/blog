@@ -11,7 +11,6 @@ module.exports = function sortMiddleware(req, res, next) {
       type: req.query.type,
       column: req.query.column,
     })
-
   }
 
   next()
