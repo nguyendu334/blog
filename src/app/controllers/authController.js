@@ -1,10 +1,10 @@
 class authController {
   login(req, res) {
-    res.render('../../resources/views/login/login.hbs');
+    res.render('login/login');
   }
 
   register(req, res) {
-    res.render('../../resources/views/login/register.hbs');
+    res.render('login/register');
   }
 
 }
