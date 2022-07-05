@@ -164,7 +164,7 @@
 
 </head>
 
-<body style="padding-top: 100px">
+<body style="">
   <div class="wrapper">
     <div class="title">Login Form</div>
     <form action='/' method="">
@@ -186,24 +186,9 @@
       <div class="field">
         <input type="submit" value="Login">
       </div>
-      <div class="signup-link">Not a member? <a href="/auth/register">Signup now</a></div>
+      <div class="signup-link">Not a member? Register <a href="/auth/register">here</a></div>
     </form>
   </div>
-
-
-
-  <script type="text/javascript">
-    var passWordField = document.getElementById('password')
-    var passWordConfirmField = document.getElementById('password_conf')
-    var form = document.getElementById('login')
-    function validateMyForm() {
-      if (passWordField.value != passWordConfirmField.value) {
-        alert("Passwords do not match. Please try again.");
-      } else {
-        form.submit()
-      }
-    }
-  </script>
 </body>
 
 </html>
