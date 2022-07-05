@@ -1,9 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const user = require('../app/models/user');
+var express = require('express');
+var router = express.Router();
+const path = require('path');
+var User = require('.././app/models/user');
 const authController = require('../app/controllers/authController');
 
-router.get('/login', authController.index);
+
+// GET route for reading data
+router.get('/login', authController.login);
 router.get('/register', authController.register);
 
 module.exports = router;

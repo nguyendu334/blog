@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
-var UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
@@ -27,7 +27,7 @@ UserSchema.statics.authenticate = function (email, password, callback) {
       if (err) {
         return callback(err)
       } else if (!user) {
-        var err = new Error('User not found.');
+        const err = new Error('User not found.');
         err.status = 401;
         return callback(err);
       }
@@ -43,7 +43,7 @@ UserSchema.statics.authenticate = function (email, password, callback) {
 
 //hashing a password before saving it to the database
 UserSchema.pre('save', function (next) {
-  var user = this;
+  const user = this;
   bcrypt.hash(user.password, 10, function (err, hash) {
     if (err) {
       return next(err);
@@ -54,6 +54,5 @@ UserSchema.pre('save', function (next) {
 });
 
 
-var User = mongoose.model('user', UserSchema);
-
+const User = mongoose.model('user', UserSchema);
 module.exports = User;

@@ -165,15 +165,15 @@
 </head>
 
 <body style="padding-top: 100px">
-  <div class="wrapper" >
+  <div class="wrapper">
     <div class="title">Login Form</div>
-    <form action="#">
+    <form action='/' method="">
       <div class="field">
-        <input type="text" required>
+        <input type="text" required="">
         <label>Email Address</label>
       </div>
       <div class="field">
-        <input type="password" required>
+        <input type="password" required="">
         <label>Password</label>
       </div>
       <div class="content">
@@ -189,6 +189,21 @@
       <div class="signup-link">Not a member? <a href="/auth/register">Signup now</a></div>
     </form>
   </div>
+
+
+
+  <script type="text/javascript">
+    var passWordField = document.getElementById('password')
+    var passWordConfirmField = document.getElementById('password_conf')
+    var form = document.getElementById('login')
+    function validateMyForm() {
+      if (passWordField.value != passWordConfirmField.value) {
+        alert("Passwords do not match. Please try again.");
+      } else {
+        form.submit()
+      }
+    }
+  </script>
 </body>
 
 </html>

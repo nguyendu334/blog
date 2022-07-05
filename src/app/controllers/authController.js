@@ -1,5 +1,5 @@
 class authController {
-  index(req, res) {
+  login(req, res) {
     res.render('../../resources/views/login/login.hbs');
   }
 
