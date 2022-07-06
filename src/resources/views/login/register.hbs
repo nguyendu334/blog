@@ -36,41 +36,26 @@
             {{/if}}
             {{!-- End If Condition --}}
 
-            <form method="" id="registration" action="/auth/login">
+            <form method="post" id="registration" action="/auth/register">
                 <div class="form-group">
-                    <label for="fname">First Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name"
-                        value="{{fname}}">
+                    <label for="name">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter Your Name"
+                        value="{{username}}" required="">
                 </div>
                 <div class="form-group">
-                    <label for="mname">Middle Name</label>
-                    <input type="text" class="form-control" id="mname" name="mname" placeholder="Enter Your Middle Name"
-                        value="{{mname}}">
-                </div>
-                <div class="form-group">
-                    <label for="lname">Last Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name"
-                        value="{{lname}}">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Id <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email id"
-                        value="{{email}}">
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile Number <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="mobile" id="mobile"
-                        placeholder="Enter your Mobile Number" value="{{mobile}}">
+                    <label for="email">Email<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email"
+                        value="{{email}}" required="">
                 </div>
                 <div class="form-group">
                     <label for="password">Password <span class="text-danger">*</span></label>
                     <input type="password" class="form-control" name="password" id="password"
-                        placeholder="Enter Your Password" value="{{password}}">
+                        placeholder="Enter Your Password" value="{{password}}" required=""> 
                 </div>
                 <div class="form-group">
                     <label for="cpassword">Confirm Password <span class="text-danger">*</span></label>
                     <input type="password" class="form-control" name="cpassword" id="cpassword"
-                        placeholder="Enter Same as Password" value="{{cpassword}}">
+                        placeholder="Enter Same as Password" value="{{cpassword}}" required="">
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Register" class="btn btn-info btn-block"
